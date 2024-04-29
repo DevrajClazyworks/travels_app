@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:travelsapp/Utils/responsive.dart';
+import 'package:travelsapp/View/bottomBarView.dart';
+import 'package:travelsapp/View/homeview.dart';
 import 'package:travelsapp/View/signup.dart';
 import 'package:travelsapp/View/tracking.dart';
 
@@ -77,8 +79,7 @@ class _LoginscreenState extends State<Loginscreen> {
                       textInputAction: TextInputAction.next,
                       inputFormatters: [
                         FilteringTextInputFormatter.digitsOnly,
-                        LengthLimitingTextInputFormatter(
-                            10), //n is maximum number of characters you want in textfield
+                        LengthLimitingTextInputFormatter(10),
                       ],
                       style: TextStyle(
                           fontSize: 12.0.sp,
@@ -301,7 +302,7 @@ class _LoginscreenState extends State<Loginscreen> {
                       borderRadius: BorderRadius.circular(10))),
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TrackingPage()),
+                  MaterialPageRoute(builder: (context) => BottomNavBar()),
                 );
               },
               child: Text(
