@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:travelsapp/View/Splashview.dart';
 import 'package:travelsapp/View/loginscreen.dart';
 void main() {
@@ -16,7 +17,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return  GetMaterialApp(
-      //theme: ThemeData(fontFamily: 'ral',),
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+        textTheme: GoogleFonts.jostTextTheme(
+          Theme.of(context).textTheme
+        )
+      ),
     title: 'Prodigious',
       debugShowCheckedModeBanner: false,
       home: SplashView(),
