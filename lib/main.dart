@@ -16,6 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return  GetMaterialApp(
+      //theme: ThemeData(fontFamily: 'ral',),
     title: 'Prodigious',
       debugShowCheckedModeBanner: false,
       home: SplashView(),
